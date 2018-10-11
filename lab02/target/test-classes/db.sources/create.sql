@@ -7,12 +7,15 @@ CREATE TABLE owner
   iq int NOT NULL
 );
 
-CREATE TABLE pet
+create table pet
 (
-  id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  name         char(25) NOT NULL,
-  age          int      NOT NULL,
-  type         char(25) NOT NULL,
-  pet_owner_id int      NOT NULL,
-  FOREIGN KEY (pet_owner_id) REFERENCES owner (id)
+  id           int auto_increment
+    primary key,
+  name         char(25) not null,
+  age          int      not null,
+  type         char(25) not null,
+  pet_owner_id int      not null,
+  constraint pet_owner_id
+  foreign key (pet_owner_id) references owner (id)
+    on delete cascade
 );
