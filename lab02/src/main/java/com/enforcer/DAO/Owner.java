@@ -33,7 +33,6 @@ public class Owner {
 
     public void setBirthDate(String birthDate) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
         try {
             this.birthDate = simpleDateFormat.parse(birthDate);
         } catch (ParseException e) {

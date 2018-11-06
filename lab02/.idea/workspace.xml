@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c3e906d-fe15-4485-888b-1cfa057063db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/DAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/MySQLOwnerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/MySQLPetDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/Owner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/OwnerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/PetDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/enforcer/DAO/MySQLOwnerDAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/enforcer/DAO/MySQLPetDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/Owner.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -141,7 +126,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="26" />
+          <entry key="java" value="27" />
           <entry key="lab02_owner" value="1" />
           <entry key="owner" value="3" />
           <entry key="pet" value="2" />
@@ -151,7 +136,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="6" />
-          <entry key="JAVA" value="26" />
+          <entry key="JAVA" value="27" />
           <entry key="SQL" value="7" />
           <entry key="Scratch" value="5" />
         </counts>
@@ -159,16 +144,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="73" />
-          <entry key="java" value="5290" />
+          <entry key="java" value="5295" />
           <entry key="properties" value="11" />
           <entry key="sql" value="9" />
-          <entry key="txt" value="23" />
+          <entry key="txt" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5290" />
-          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="JAVA" value="5295" />
+          <entry key="PLAIN_TEXT" value="51" />
           <entry key="Properties" value="11" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="81" />
@@ -197,11 +182,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/DAO/MySQLOwnerDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="83" column="41" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
+              <caret line="83" column="106" lean-forward="true" selection-start-line="83" selection-start-column="105" selection-end-line="83" selection-end-column="106" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -221,7 +206,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/enforcer/DAO/MySQLOwnerDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="362">
@@ -242,14 +227,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/DAO/Owner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
+            <state relative-caret-position="752">
+              <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#219#220#0" expanded="true" />
                 <element signature="e#244#245#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
                 <element signature="e#337#338#0" expanded="true" />
                 <element signature="e#364#365#0" expanded="true" />
                 <element signature="e#404#405#0" expanded="true" />
@@ -330,10 +315,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/DAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/enforcer/DAO/MySQLPetDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/MySQLPetDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/Owner.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/OwnerDAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/enforcer/DAO/MySQLOwnerDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/MySQLOwnerDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/enforcer/DAO/Owner.java" />
       </list>
     </option>
   </component>
@@ -468,12 +453,12 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541506189336" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541506896385" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Google Диск/SnakeGame" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -618,7 +603,7 @@
       <workItem from="1540280030472" duration="8935000" />
       <workItem from="1540480739395" duration="924000" />
       <workItem from="1540909140090" duration="3647000" />
-      <workItem from="1541495744880" duration="6688000" />
+      <workItem from="1541495744880" duration="7193000" />
     </task>
     <task id="LOCAL-00001" summary="can do nothing">
       <created>1539245178270</created>
@@ -627,13 +612,17 @@
       <option name="project" value="LOCAL" />
       <updated>1539245178270</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="lab 3 owner methods are done">
+      <created>1541506399396</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541506399396</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MySQLOwnerDAOTest_delete - 2018.10.23 at 13h 34m 49s.xml">
-      <configuration name="MySQLOwnerDAOTest.delete" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MySQLOwnerDAOTest_delete - 2018.10.23 at 13h 35m 36s.xml">
       <configuration name="MySQLOwnerDAOTest.delete" configurationId="JUnit" />
     </history-entry>
@@ -661,15 +650,18 @@
     <history-entry file="MySQLOwnerDAOTest_update - 2018.11.06 at 14h 58m 37s.xml">
       <configuration name="MySQLOwnerDAOTest.update" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MySQLOwnerDAOTest_update - 2018.11.06 at 15h 09m 54s.xml">
+      <configuration name="MySQLOwnerDAOTest.update" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47573000" />
+    <option name="totallyTimeSpent" value="48078000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1944801" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1944801" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -679,7 +671,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293011" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31989247" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31989247" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -696,7 +688,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.32995737" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.12323492" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.13157895" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -709,7 +701,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="can do nothing" />
-    <option name="LAST_COMMIT_MESSAGE" value="can do nothing" />
+    <MESSAGE value="lab 3 owner methods are done" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab 3 owner methods are done" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -790,16 +783,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/DAO/MySQLDAOFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/DAO/GenericDAO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/DAO/AbstractJDBCDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1264">
-          <caret line="88" column="35" lean-forward="true" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/DAO/PetDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -862,16 +845,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/enforcer/DAO/MySQLPetDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/DAO/OwnerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/DAO/MySQLPetDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/enforcer/DAO/MySQLOwnerDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="60" column="58" lean-forward="true" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a237235a-92c2-4158-a9f0-e52678dcfca2/schema/lab02/table/owner">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="358" column="41" lean-forward="true" selection-start-line="358" selection-start-column="41" selection-end-line="358" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/DAO/Owner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
+        <state relative-caret-position="752">
+          <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#219#220#0" expanded="true" />
             <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
             <element signature="e#337#338#0" expanded="true" />
             <element signature="e#364#365#0" expanded="true" />
             <element signature="e#404#405#0" expanded="true" />
@@ -890,51 +921,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/enforcer/DAO/MySQLPetDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/DAO/OwnerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a237235a-92c2-4158-a9f0-e52678dcfca2/schema/lab02/table/owner">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/DAO/MySQLPetDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/enforcer/DAO/MySQLOwnerDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="83" column="41" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
+          <caret line="83" column="106" lean-forward="true" selection-start-line="83" selection-start-column="105" selection-end-line="83" selection-end-column="106" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/enforcer/DAO/MySQLOwnerDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="60" column="58" lean-forward="true" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
         </state>
       </provider>
     </entry>
