@@ -1,21 +1,22 @@
 package com.enforcer.DAO;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
 public interface PetDAO {
     /** Создает новую запись и соответствующий ей объект */
-    public Pet create();
+    Pet create() throws IOException, SQLException;
 
     /** Возвращает объект соответствующий записи с первичным ключом key или null */
-    public Pet read(int key) throws SQLException;
+    Pet read(int key) throws SQLException;
 
     /** Сохраняет состояние объекта group в базе данных */
-    public void update(Pet pet);
+   void update(Pet pet, int key) throws SQLException;
 
     /** Удаляет запись об объекте из базы данных */
-    public void delete(Pet pet);
+   void delete(Pet pet) throws SQLException;
 
     /** Возвращает список объектов соответствующих всем записям в базе данных */
-    public List<Pet> getAll() throws SQLException;
+    List<Pet> getAll() throws SQLException;
 }
