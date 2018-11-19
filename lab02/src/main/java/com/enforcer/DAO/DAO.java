@@ -22,6 +22,12 @@ public class DAO {
         return new MySQLPetDAO(connection);
     }
 
+    public static void connectionClose(Connection connection) throws SQLException {
+        if (!connection.isClosed()) {
+            connection.close();
+        }
+    }
+
     public DAO() {
         try {
             Class.forName(driver);//Регистрируем драйвер

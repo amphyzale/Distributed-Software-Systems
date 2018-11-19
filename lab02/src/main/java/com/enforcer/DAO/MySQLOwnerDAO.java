@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static com.enforcer.DAO.DAO.connectionClose;
+
 public class MySQLOwnerDAO implements OwnerDAO{
     private final Connection connection;
 
@@ -21,7 +23,7 @@ public class MySQLOwnerDAO implements OwnerDAO{
     }
 
     @Override
-    public Owner create() throws IOException {
+    public Owner create() throws IOException, SQLException {
         Owner owner = new Owner();
         String query = "insert into owner (`name`, `birthDate`, `address`, `iq`) values (?, ?, ?, ?)";
         //BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -41,7 +43,6 @@ public class MySQLOwnerDAO implements OwnerDAO{
             owner.setBirthDate("1999-01-10");
             owner.setAddress("LastAddress");
             owner.setIq(150);
-            //java.sql.Date sqlDate = new java.sql.Date(owner.getBirthDate());
             preparedStatement.setString(1, owner.getName());
             preparedStatement.setDate(2, new java.sql.Date(owner.getBirthDate().getTime()));
             preparedStatement.setString(3, owner.getAddress());
@@ -62,20 +63,20 @@ public class MySQLOwnerDAO implements OwnerDAO{
 
     @Override
     public Owner read(int key) throws SQLException {
-        String query = "select * from owner where id = ?";
-        PreparedStatement preparedStatement = connection.prepareStatement(query);
-        preparedStatement.setInt(1, key);
-        ResultSet resultSet = preparedStatement.executeQuery();
-        resultSet.next();
+            String query = "select * from owner where id = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, key);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            resultSet.next();
 
-        Owner owner = new Owner();
-        owner.setId(resultSet.getInt("id"));
-        owner.setName(resultSet.getString("name"));
-        owner.setBirthDate(resultSet.getDate("birthDate").toString());
-        owner.setAddress(resultSet.getString("address"));
-        owner.setIq(resultSet.getInt("iq"));
+            Owner owner = new Owner();
+            owner.setId(resultSet.getInt("id"));
+            owner.setName(resultSet.getString("name"));
+            owner.setBirthDate(resultSet.getDate("birthDate").toString());
+            owner.setAddress(resultSet.getString("address"));
+            owner.setIq(resultSet.getInt("iq"));
 
-        return owner;
+            return owner;
     }
 
     @Override
@@ -121,13 +122,14 @@ public class MySQLOwnerDAO implements OwnerDAO{
 
     @Override
     public List<Owner> getAll() throws SQLException {
+
         String query = "select * from owner";
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         ResultSet resultSet = preparedStatement.executeQuery();
         List<Owner> list = new ArrayList<Owner>();
         Owner owner = new Owner();
 
-        while (resultSet.next()){
+        while (resultSet.next()) {
             owner.setId(resultSet.getInt("id"));
             owner.setName(resultSet.getString("name"));
             owner.setBirthDate(resultSet.getDate("birthDate").toString());

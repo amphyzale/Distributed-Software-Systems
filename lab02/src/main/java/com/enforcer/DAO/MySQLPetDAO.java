@@ -1,11 +1,16 @@
 package com.enforcer.DAO;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.enforcer.DAO.DAO.connectionClose;
 
 public class MySQLPetDAO implements PetDAO {
     private final Connection connection;
@@ -15,8 +20,42 @@ public class MySQLPetDAO implements PetDAO {
     }
 
     @Override
-    public Pet create() {
-        return null;
+    public Pet create(){
+        Pet pet = new Pet();
+        String query = "insert into pet (`name`, `age`, `type`, `pet_owner_id`) values (?, ?, ?, ?)";
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+
+//            System.out.println("Input Name: ");
+//            pet.setName(reader.readLine());
+//            System.out.println("Input age: ");
+//            pet.setAge(Integer.parseInt(reader.readLine()));
+//            System.out.println("Input type");
+//            pet.setType(reader.readLine());
+//            System.out.println("Input Owner id");
+//            pet.setPetOwnerId(Integer.parseInt(reader.readLine()));
+
+            pet.setName("LastName");
+            pet.setAge(5);
+            pet.setType("Dog");
+            pet.setPetOwnerId(1);
+            preparedStatement.setString(1, pet.getName());
+            preparedStatement.setInt(2, pet.getAge());
+            preparedStatement.setString(3, pet.getType());
+            preparedStatement.setLong(4, pet.getPetOwnerId());
+
+            if (preparedStatement.executeUpdate() > 0) {
+                PetDAO petDAO = new DAO().getPetDao(connection);
+                System.out.println("Pet was create with id: " +
+                        (int) (petDAO.getAll().get(petDAO.getAll().size() - 1)).getId());
+                return pet;
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            return null;
+        }
     }
 
     @Override
@@ -38,13 +77,27 @@ public class MySQLPetDAO implements PetDAO {
     }
 
     @Override
-    public void update(Pet pet) {
+    public void update(Pet pet, int key) {
+        String query = "update pet set `name` = ?, `age` = ?, `pet_owner_id` = ? where id = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
 
+            preparedStatement.setString(1, pet.getName());
+            preparedStatement.setInt(2, pet.getAge());
+            preparedStatement.setLong(3, pet.getPetOwnerId());
+            preparedStatement.setInt(4, key);
+
+            if (preparedStatement.executeUpdate() > 0) {
+                System.out.println("Owner was changed");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @Override
-    public void delete(Pet pet) {
+    public void delete(Pet pet) throws SQLException {
         String query = "delete from pet where id = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             try {
@@ -56,9 +109,10 @@ public class MySQLPetDAO implements PetDAO {
             if (count != 1) {
                 throw new SQLException("On delete modify more then one record: " + count);
             }
-            preparedStatement.close();
         } catch (SQLException e){
             e.printStackTrace();
+        } finally {
+            connectionClose(connection);
         }
     }
 

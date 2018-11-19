@@ -31,7 +31,7 @@ public class MySQLOwnerDAOTest {
             OwnerDAO ownerDAO = new DAO().getOwnerDao(connection);
             owner = ownerDAO.create();
         }
-        Assert.assertNotNull(owner);
+        Assert.assertNotNull(owner.getName());
         System.out.println(owner.getBirthDate());
     }
 
@@ -56,7 +56,7 @@ public class MySQLOwnerDAOTest {
         owner.setIq(200);
         try (Connection connection = new DAO().getConnection()) {
             OwnerDAO ownerDAO = new DAO().getOwnerDao(connection);
-            ownerDAO.update(owner, 12);
+            ownerDAO.update(owner, 1);
         }
         Connection connection = new DAO().getConnection();
         OwnerDAO ownerDAO = new DAO().getOwnerDao(connection);

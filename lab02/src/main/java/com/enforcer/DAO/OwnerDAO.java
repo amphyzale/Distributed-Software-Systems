@@ -6,17 +6,17 @@ import java.util.List;
 
 public interface OwnerDAO {
     /** Создает новую запись и соответствующий ей объект */
-    public Owner create() throws IOException;
+    Owner create() throws IOException, SQLException;
 
     /** Возвращает объект соответствующий записи с первичным ключом key или null */
-    public Owner read(int key) throws SQLException;
+    Owner read(int key) throws SQLException;
 
     /** Сохраняет состояние объекта group в базе данных */
-    public void update(Owner owner, int key);
+    void update(Owner owner, int key);
 
     /** Удаляет запись об объекте из базы данных */
-    public void delete(Owner owner) throws SQLException;
+    void delete(Owner owner) throws SQLException;
 
     /** Возвращает список объектов соответствующих всем записям в базе данных */
-    public List<Owner> getAll() throws SQLException;
+    List<Owner> getAll() throws SQLException;
 }
