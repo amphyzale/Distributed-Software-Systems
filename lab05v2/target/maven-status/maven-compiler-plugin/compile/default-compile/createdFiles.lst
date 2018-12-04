@@ -1,0 +1,6 @@
+com\enfor\myapp\dao\OwnerDAOImpl.class
+com\enfor\myapp\dao\OwnerDAO.class
+com\enfor\myapp\model\Owner.class
+com\enfor\myapp\service\OwnerService.class
+com\enfor\myapp\service\OwnerServiceImpl.class
+com\enfor\myapp\controllers\OwnerController.class
