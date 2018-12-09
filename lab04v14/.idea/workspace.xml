@@ -7,30 +7,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2b756a9-5354-4334-bfcf-918e0606887f" name="Default Changelist" comment="its works">
-      <change afterPath="$PROJECT_DIR$/../lab04v15/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/src/main/java/Entity/Owner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/src/main/java/Model/DAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/src/main/java/Servlets/MainServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/src/main/webapp/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v15/src/main/webapp/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v5/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v5/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v5/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v5/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab04v5/src/main/java/DAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab05v2/.idea/artifacts/lab05v2_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab05v2/.idea/artifacts/lab05v2_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab05v2/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab05v2/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab05v2/src/main/webapp/WEB-INF/views/404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab05v2/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab05v2/src/main/webapp/WEB-INF/views/ownerdata.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab05v2/src/main/webapp/WEB-INF/views/owners.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab05v2/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b80bac70-89a0-43ef-b404-cc2b30113e0b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b80bac70-89a0-43ef-b404-cc2b30113e0b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab04v14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab04v15/lab04v15.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entity/Owner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Model/DAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Servlets/MainServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/.idea/dataSources/fdd37354-1ed7-4872-9d06-e8e7a30e8856.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/.idea/dataSources/fdd37354-1ed7-4872-9d06-e8e7a30e8856.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/lab05v2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/lab05v2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/src/main/java/com/enfor/myapp/controllers/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/src/main/java/com/enfor/myapp/controllers/OwnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/src/main/java/com/enfor/myapp/dao/OwnerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/src/main/java/com/enfor/myapp/dao/OwnerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/src/main/java/com/enfor/myapp/dao/OwnerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/src/main/java/com/enfor/myapp/dao/OwnerDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/src/main/java/com/enfor/myapp/model/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/src/main/java/com/enfor/myapp/model/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/src/main/java/com/enfor/myapp/service/OwnerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/src/main/java/com/enfor/myapp/service/OwnerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/src/main/java/com/enfor/myapp/service/OwnerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/src/main/java/com/enfor/myapp/service/OwnerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/src/main/webapp/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/classes/com/enfor/myapp/controllers/OwnerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/classes/com/enfor/myapp/controllers/OwnerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/classes/com/enfor/myapp/dao/OwnerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/classes/com/enfor/myapp/dao/OwnerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/classes/com/enfor/myapp/dao/OwnerDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/classes/com/enfor/myapp/dao/OwnerDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/classes/com/enfor/myapp/model/Owner.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/classes/com/enfor/myapp/model/Owner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/classes/com/enfor/myapp/service/OwnerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/classes/com/enfor/myapp/service/OwnerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/classes/com/enfor/myapp/service/OwnerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/classes/com/enfor/myapp/service/OwnerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/lib/spring-context-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/lib/spring-web-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/lab05v2-1.0-SNAPSHOT/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05v2/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05v2/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -77,36 +107,13 @@
     </expand>
     <select />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1649589292">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="xml" value="17" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="XML" value="17" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
+            <state relative-caret-position="-122">
+              <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -114,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="654">
+              <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -123,17 +130,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="896">
-              <caret line="56" column="67" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="67" />
+            <state relative-caret-position="799">
+              <caret line="47" column="69" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1024">
-              <caret line="64" column="62" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
+            <state relative-caret-position="422">
+              <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -141,7 +148,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
+            <state relative-caret-position="340">
               <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
             </state>
           </provider>
@@ -150,8 +157,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/DAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1392">
-              <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+            <state relative-caret-position="425">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -162,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Entity/Owner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="35" column="62" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="79" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -201,12 +208,6 @@
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -238,9 +239,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="661" />
-    <option name="width" value="978" />
-    <option name="height" value="1051" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -250,7 +251,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,7 +281,24 @@
               <item name="lab04v14" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab04v14" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab04v14" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab04v14" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab04v14" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Servlets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lab04v14" type="b2602c69:ProjectViewProjectNode" />
@@ -289,12 +306,30 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab04v14" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab04v14" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab04v14" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab04v14" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="lab04v14-1.0-SNAPSHOT" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab04v14" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab04v14" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="lab04v14-1.0-SNAPSHOT" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -304,7 +339,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542886781616" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab05v2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -342,11 +377,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_lab04v14" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="62807" />
       </RunnerSettings>
@@ -420,6 +455,12 @@
       <workItem from="1542877246551" duration="3153000" />
       <workItem from="1543469755686" duration="592000" />
       <workItem from="1543502290936" duration="14000" />
+      <workItem from="1543952742495" duration="1100000" />
+      <workItem from="1544029291884" duration="2129000" />
+      <workItem from="1544096807322" duration="1222000" />
+      <workItem from="1544197760530" duration="55000" />
+      <workItem from="1544197837685" duration="615000" />
+      <workItem from="1544348751965" duration="5313000" />
     </task>
     <task id="LOCAL-00001" summary="its works">
       <created>1542830645876</created>
@@ -432,13 +473,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11199000" />
+    <option name="totallyTimeSpent" value="21633000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.062901154" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.120469086" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -449,7 +490,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3252688" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32502708" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -476,14 +517,11 @@
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info anchor="right" id="Bean Validation" order="11" />
-      <window_info anchor="right" id="Maven" order="12" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Maven" order="12" visible="true" weight="0.20042644" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="its works" />
@@ -492,13 +530,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WEB-INF/jetty-web.xml" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9011153c-2507-4acc-a2ea-ff4bc6cae323/console.sql" />
-    <entry file="das://b80bac70-89a0-43ef-b404-cc2b30113e0b/schema/lab02/table/owner">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://b80bac70-89a0-43ef-b404-cc2b30113e0b/schema/lab02/table/owner" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b80bac70-89a0-43ef-b404-cc2b30113e0b/console.sql" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Servlets/MainServlet.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -507,45 +539,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="56" column="67" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1024">
-          <caret line="64" column="62" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/DAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1392">
-          <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+        <state relative-caret-position="425">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -554,11 +551,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Entity/Owner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="35" column="62" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="79" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/lab04v14-1.0-SNAPSHOT/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="69" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-122">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
         </state>
       </provider>
     </entry>
