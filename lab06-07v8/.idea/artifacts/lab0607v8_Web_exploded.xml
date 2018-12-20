@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="lab0607v8:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/lab0607v8_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="lab0607v8/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="lab0607v8" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.0.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
