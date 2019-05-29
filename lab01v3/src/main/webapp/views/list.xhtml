@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+
+</h:head>
+<h:body>
+    <h:dataTable value="#{ownerCDI.allOwners}" var="owner">
+        <h:column>
+            <h:outputText value="#{owner.id}" />
+        </h:column>
+
+        <h:column>
+            <h:outputText value="#{owner.name}" />
+        </h:column>
+        <h:column>
+            <h:outputText value="#{owner.birthDate}" />
+        </h:column>
+
+        <h:column>
+            <h:outputText value="#{owner.address}" />
+        </h:column>
+        <h:column>
+            <h:outputText value="#{owner.iq}" />
+        </h:column>
+
+    </h:dataTable>
+
+    <h:form>
+        <h:outputText value="owners : "></h:outputText>
+        <p:dataTable id="owners" var="owner" value="#{ownerCDI.allOwners}" style="width: 10%" >
+            <p:column width="80" sortBy="#{owner.id}">
+                <f:facet name="header">
+                    <h:outputText value="ID" />
+                </f:facet>
+                <h:outputText value="#{owner.id}" />
+            </p:column>
+            <p:column width="120" sortBy="#{owner.name}">
+                <f:facet name="header">
+                    <h:outputText value="Name" />
+                </f:facet>
+                <h:outputText value="#{owner.name}" />
+            </p:column>
+            <p:column width="120" sortBy="#{owner.birthDate}">
+                <f:facet name="header">
+                    <h:outputText value="BirthDate" />
+                </f:facet>
+                <h:outputText value="#{owner.birthDate}">
+                    <f:convertDateTime pattern="yyyy-MM-dd" type="date"/>
+                </h:outputText>
+            </p:column>
+            <p:column width="120" sortBy="#{owner.address}">
+                <f:facet name="header">
+                    <h:outputText value="Address" />
+                </f:facet>
+                <h:outputText value="#{owner.address}" />
+            </p:column>
+            <p:column width="120" sortBy="#{owner.iq}">
+                <f:facet name="header">
+                    <h:outputText value="IQ" />
+                </f:facet>
+                <h:outputText value="#{owner.iq}" />
+            </p:column>
+            <p:column width="120">
+                <f:facet name="header">
+                    <h:outputText value="update" />
+                </f:facet>
+                <p:commandButton id="updateOwner" value="Update" action="#{ownerBean.updateOwner(owner)}" ajax="false"/>
+            </p:column>
+            <p:column width="120">
+                <f:facet name="header">
+                    <h:outputText value="Delete" />
+                </f:facet>
+                <p:commandButton id="deleteOwner" value="Delete" action="#{ownerBean.deleteOwner(owner)}" ajax="false"/>
+            </p:column>
+
+        </p:dataTable>
+        <p:commandButton id="addOwner" value="Add Owner" action="success" />
+    </h:form>
+</h:body>
+</html>
