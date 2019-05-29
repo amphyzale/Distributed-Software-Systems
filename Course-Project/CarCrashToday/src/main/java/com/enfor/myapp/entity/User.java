@@ -4,6 +4,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import java.util.Collection;
 import java.util.Set;
 
@@ -12,14 +14,18 @@ import java.util.Set;
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
+    @NotBlank(message = "Поле не должно пустым!")
     private String username;
 
+    @NotBlank(message = "Поле не должно пустым!")
     private String password;
 
     private boolean activity;
 
+    @Email(message = "Значение не корректно!")
+    @NotBlank(message = "Поле не должно пустым!")
     private String email;
 
     private String activationCode;
@@ -37,11 +43,11 @@ public class User implements UserDetails {
         return roles.contains(Role.MODERATOR);
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -117,4 +123,5 @@ public class User implements UserDetails {
     public void setActivationCode(String activationCode) {
         this.activationCode = activationCode;
     }
+
 }

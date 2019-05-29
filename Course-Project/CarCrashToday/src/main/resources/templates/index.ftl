@@ -13,18 +13,30 @@
     <a class="btn btn-primary mb-2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
         Добавить новость
     </a>
-    <div>
+    <div class="collapse<#if message??>show</#if>" id="collapseExample">
         <div class="form-group">
-            <form class="collapse" id="collapseExample" method="post" enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <input class="form-control" type="text" name="text" placeholder="Введите сообщение" />
+                    <input type="text" class="form-control ${(textError??)?string('is-invalid', '')}"
+                           value="<#if message??>${message.text}</#if>" name="text" placeholder="Введите сообщение" />
+                    <#if textError??>
+                        <div class="invalid-feedback">
+                            ${textError}
+                        </div>
+                    </#if>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="tag" placeholder="Тэг">
+                    <input class="form-control" type="text" name="tag" placeholder="Тэг"
+                           value="<#if message??>${message.text}</#if>">
+                    <#if tфпError??>
+                        <div class="invalid-feedback">
+                            ${tфпError}
+                        </div>
+                    </#if>
                 </div>
                 <div class="custom-file">
                     <input type="file" name="file" id="customFile"/>
-                    <label class="custom-file-label" for="customFile">Choose file</label>
+                    <label class="custom-file-label" for="customFile">Выберите файл</label>
                 </div>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
                 <button class="btn btn-primary mt-2" type="submit">Добавить</button>

@@ -1,15 +1,21 @@
 package com.enfor.myapp.entity;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
+    @NotBlank(message = "Пожалйста, заполните поле!")
+    @Length(max = 2048, message = "Многа букав!")
     private String text;
 
+    @Length(max = 255, message = "Многа букав!")
     private String tag;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -47,11 +53,11 @@ public class Message {
         this.author = author;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
