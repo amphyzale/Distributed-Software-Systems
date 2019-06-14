@@ -1,5 +1,6 @@
 <#import "parts/common.ftl" as c>
 
+
 <@c.page>
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -9,60 +10,10 @@
             </form>
         </div>
     </div>
+    <a class="btn btn-primary mb-2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+       aria-controls="collapseExample">Предложить новость</a>
+    <#include "parts/messageEdit.ftl" />
 
-    <a class="btn btn-primary mb-2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-        Добавить новость
-    </a>
-    <div class="collapse<#if message??>show</#if>" id="collapseExample">
-        <div class="form-group">
-            <form method="post" enctype="multipart/form-data">
-                <div class="form-group">
-                    <input type="text" class="form-control ${(textError??)?string('is-invalid', '')}"
-                           value="<#if message??>${message.text}</#if>" name="text" placeholder="Введите сообщение" />
-                    <#if textError??>
-                        <div class="invalid-feedback">
-                            ${textError}
-                        </div>
-                    </#if>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="tag" placeholder="Тэг"
-                           value="<#if message??>${message.text}</#if>">
-                    <#if tфпError??>
-                        <div class="invalid-feedback">
-                            ${tфпError}
-                        </div>
-                    </#if>
-                </div>
-                <div class="custom-file">
-                    <input type="file" name="file" id="customFile"/>
-                    <label class="custom-file-label" for="customFile">Выберите файл</label>
-                </div>
-                <input type="hidden" name="_csrf" value="${_csrf.token}" />
-                <button class="btn btn-primary mt-2" type="submit">Добавить</button>
-            </form>
-        </div>
-    </div>
-
-    <#list messages as message>
-        <div class="card mb-3">
-            <div <#if message.filename??>style="height: 10rem; overflow: hidden;"</#if>>
-                <#if message.filename??>
-                    <img class="card-img-top" src="/img/${message.filename}"  alt="Card image cap">
-                </#if>
-            </div>
-            <div class="card-body" style="height: 10rem;">
-                <h5 class="card-title">Card title//TODO</h5>
-                <p class="card-text">${message.text}</p>
-                <p class="card-text"><small class="text-muted">${message.tag}</i></small></p>
-                <div>
-                    <strong>${message.authorName} //TODO</strong>
-                </div>
-            </div>
-
-        </div>
-    <#else >
-        No Messages
-    </#list>
+    <#include 'parts/newsList.ftl' />
 
 </@c.page>

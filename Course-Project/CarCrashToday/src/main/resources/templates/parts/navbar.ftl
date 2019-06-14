@@ -15,6 +15,11 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/index">Новости</a>
             </li>
+            <#if user??>
+            <li class="nav-item active">
+                <a class="nav-link" href="/user_news/${currentUserId}">Предложенные новости</a>
+            </li>
+            </#if>
             <#if isAdmin>
             <li class="nav-item active">
                 <a class="nav-link" href="/user">Список пользователей</a>
@@ -28,6 +33,9 @@
         </ul>
 
         <div class="navbar-text mr-3">${name}</div>
+
+        <#if user??>
         <@l.logout/>
+        </#if>
     </div>
 </nav>

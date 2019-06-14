@@ -3,47 +3,55 @@ package com.enfor.myapp.controller;
 import com.enfor.myapp.entity.Message;
 import com.enfor.myapp.entity.User;
 import com.enfor.myapp.repository.MessageRepository;
+import com.enfor.myapp.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
-import java.io.File;
 import java.io.IOException;
 import java.util.Map;
-import java.util.UUID;
+import java.util.Set;
 
 @Controller
 public class IndexController {
     @Autowired
     private MessageRepository messageRepository;
 
-    @Value("${upload.path}")
-    private String uploadPath;
+    @Autowired
+    private FileService fileService;
 
     @GetMapping("/")
-    public String greeting(Map<String, Object> model) {
+    public String greeting(Model model) {
         return "greeting";
     }
 
     @GetMapping("/index")
-    public String index(@RequestParam(required = false, defaultValue = "") String filter, Model model) {    //параметры запроса
-        Iterable<Message> messages =  messageRepository.findAll();
+    public String index(@RequestParam(required = false, defaultValue = "") String filter,
+                        Model model,
+                        @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable) {    //параметры запроса
+        Page<Message> page;
 
         if (filter != null && !filter.isEmpty()) {
-            messages = messageRepository.findByTag(filter);
+            page = messageRepository.findByTag(filter, pageable);
         } else {
-            messages = messageRepository.findAll();
+            page = messageRepository.findAll(pageable);
         }
 
-        model.addAttribute("messages", messages);
+        model.addAttribute("page", page);
+        model.addAttribute("url", "/index");
         model.addAttribute("filter", filter);
         return "index";
     }
@@ -63,16 +71,7 @@ public class IndexController {
             model.mergeAttributes(errorsMap);
             model.addAttribute("message", message);
         } else {
-            if (file != null && !file.getOriginalFilename().isEmpty()) {
-                File uploadDir = new File(uploadPath);
-                if (!uploadDir.exists()) {
-                    uploadDir.mkdir();
-                }
-                String uuidFile = UUID.randomUUID().toString();
-                String resultFilename = uuidFile + "." + file.getOriginalFilename();
-                file.transferTo(new File(uploadPath + "/" + resultFilename));
-                message.setFilename(resultFilename);
-            }
+            fileService.saveFile(message, file);
             model.addAttribute("message", null);
             messageRepository.save(message);
         }
@@ -82,9 +81,8 @@ public class IndexController {
         Iterable<Message> messages = messageRepository.findAll();
         model.addAttribute("messages", messages);
 
-        return "index";
+        return "redirect:/index";
     }
-
 
 
 }

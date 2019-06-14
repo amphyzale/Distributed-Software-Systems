@@ -32,6 +32,10 @@ public class UserService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username);
+        /*if (user.isActivity()) {
+            throw new UsernameNotFoundException("Пользователь не активирован!");
+        }*/
+
         if (user == null) {
             throw new UsernameNotFoundException("Пользователь не существует!");
         }
@@ -42,7 +46,7 @@ public class UserService implements UserDetailsService {
         if (userRepository.findByUsername(user.getUsername()) != null) {
             return false;
         }
-        user.setActivity(true);
+        user.setActivity(false);
         user.setRoles(Collections.singleton(Role.USER));
         user.setActivationCode(UUID.randomUUID().toString());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
@@ -76,6 +80,7 @@ public class UserService implements UserDetailsService {
         }
 
         user.setActivationCode(null);
+        user.setActivity(true);
         userRepository.save(user);
         return true;
     }

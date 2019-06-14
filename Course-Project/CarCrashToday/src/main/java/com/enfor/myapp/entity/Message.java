@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.Date;
 
 @Entity
 public class Message {
@@ -11,12 +12,36 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+/*    @NotBlank(message = "Пожалйста, заполните поле!")
+    @Length(max = 256,  message = "Многа букав!")
+    private String title;*/
+
     @NotBlank(message = "Пожалйста, заполните поле!")
     @Length(max = 2048, message = "Многа букав!")
     private String text;
 
+    //TODO tags
     @Length(max = 255, message = "Многа букав!")
     private String tag;
+/*
+    @NotBlank(message = "Пожалйста, заполните поле!")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date date;
+
+    private Status status;
+
+    @NotBlank(message = "Пожалйста, заполните поле!")
+    private Car car1;
+
+    private Car car2;
+
+    @NotBlank(message = "Пожалйста, заполните поле!")
+    private Street street1;
+
+    private Street street2;
+
+    @NotBlank(message = "Пожалйста, заполните поле!")
+    private TypeOfRoadObj typeOfRoadObj;*/
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
@@ -76,4 +101,5 @@ public class Message {
     public void setTag(String tag) {
         this.tag = tag;
     }
+
 }
