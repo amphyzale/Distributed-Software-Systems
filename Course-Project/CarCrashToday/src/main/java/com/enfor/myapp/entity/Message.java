@@ -12,9 +12,9 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-/*    @NotBlank(message = "Пожалйста, заполните поле!")
+    @NotBlank(message = "Пожалйста, заполните поле!")
     @Length(max = 256,  message = "Многа букав!")
-    private String title;*/
+    private String title;
 
     @NotBlank(message = "Пожалйста, заполните поле!")
     @Length(max = 2048, message = "Многа букав!")
@@ -23,25 +23,37 @@ public class Message {
     //TODO tags
     @Length(max = 255, message = "Многа букав!")
     private String tag;
-/*
+
     @NotBlank(message = "Пожалйста, заполните поле!")
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "status_id")
     private Status status;
 
     @NotBlank(message = "Пожалйста, заполните поле!")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "car1_id")
     private Car car1;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "car2_id")
     private Car car2;
 
     @NotBlank(message = "Пожалйста, заполните поле!")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "street1_id")
     private Street street1;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "street2_id")
     private Street street2;
 
     @NotBlank(message = "Пожалйста, заполните поле!")
-    private TypeOfRoadObj typeOfRoadObj;*/
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "road_obj_id")
+    private TypeOfRoadObj typeOfRoadObj;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
