@@ -23,5 +23,37 @@ public class City {
 
     @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Street> streets;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Region getRegion() {
+        return region;
+    }
+
+    public void setRegion(Region region) {
+        this.region = region;
+    }
+
+    public Set<Street> getStreets() {
+        return streets;
+    }
+
+    public void setStreets(Set<Street> streets) {
+        this.streets = streets;
+    }
 }
 

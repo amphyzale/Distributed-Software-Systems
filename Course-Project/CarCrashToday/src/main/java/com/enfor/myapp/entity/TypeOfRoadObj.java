@@ -17,6 +17,30 @@ public class TypeOfRoadObj {
     @Length(max = 256,  message = "Многа букав!")
     private String name;
 
-    @OneToMany(mappedBy = "status", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "typeOfRoadObj", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Message> typeOfRoadObj;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Set<Message> getTypeOfRoadObj() {
+        return typeOfRoadObj;
+    }
+
+    public void setTypeOfRoadObj(Set<Message> typeOfRoadObj) {
+        this.typeOfRoadObj = typeOfRoadObj;
+    }
 }

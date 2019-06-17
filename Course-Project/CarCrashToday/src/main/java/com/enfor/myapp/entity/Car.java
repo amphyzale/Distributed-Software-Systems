@@ -31,4 +31,52 @@ public class Car {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "transport_id")
     private TypeOfTransport typeOfTransport;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getRegNum() {
+        return regNum;
+    }
+
+    public void setRegNum(String regNum) {
+        this.regNum = regNum;
+    }
+
+    public BrandOfCar getCar_brandOfCar() {
+        return car_brandOfCar;
+    }
+
+    public void setCar_brandOfCar(BrandOfCar car_brandOfCar) {
+        this.car_brandOfCar = car_brandOfCar;
+    }
+
+    public ModelOfCar getCar_modelOfCar() {
+        return car_modelOfCar;
+    }
+
+    public void setCar_modelOfCar(ModelOfCar car_modelOfCar) {
+        this.car_modelOfCar = car_modelOfCar;
+    }
+
+    public TypeOfBody getTypeOfBody() {
+        return typeOfBody;
+    }
+
+    public void setTypeOfBody(TypeOfBody typeOfBody) {
+        this.typeOfBody = typeOfBody;
+    }
+
+    public TypeOfTransport getTypeOfTransport() {
+        return typeOfTransport;
+    }
+
+    public void setTypeOfTransport(TypeOfTransport typeOfTransport) {
+        this.typeOfTransport = typeOfTransport;
+    }
 }

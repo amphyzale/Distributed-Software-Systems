@@ -20,13 +20,12 @@ public class Message {
     @Length(max = 2048, message = "Многа букав!")
     private String text;
 
-    //TODO tags
     @Length(max = 255, message = "Многа букав!")
     private String tag;
 
     @NotBlank(message = "Пожалйста, заполните поле!")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date date;
+    private Date dateOfCrash;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "status_id")
@@ -114,4 +113,67 @@ public class Message {
         this.tag = tag;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Date getDateOfCrash() {
+        return dateOfCrash;
+    }
+
+    public void setDateOfCrash(Date dateOfCrash) {
+        this.dateOfCrash = dateOfCrash;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public Car getCar1() {
+        return car1;
+    }
+
+    public void setCar1(Car car1) {
+        this.car1 = car1;
+    }
+
+    public Car getCar2() {
+        return car2;
+    }
+
+    public void setCar2(Car car2) {
+        this.car2 = car2;
+    }
+
+    public Street getStreet1() {
+        return street1;
+    }
+
+    public void setStreet1(Street street1) {
+        this.street1 = street1;
+    }
+
+    public Street getStreet2() {
+        return street2;
+    }
+
+    public void setStreet2(Street street2) {
+        this.street2 = street2;
+    }
+
+    public TypeOfRoadObj getTypeOfRoadObj() {
+        return typeOfRoadObj;
+    }
+
+    public void setTypeOfRoadObj(TypeOfRoadObj typeOfRoadObj) {
+        this.typeOfRoadObj = typeOfRoadObj;
+    }
 }

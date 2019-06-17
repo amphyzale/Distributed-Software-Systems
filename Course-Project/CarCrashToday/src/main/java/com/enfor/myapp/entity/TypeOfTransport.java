@@ -19,4 +19,28 @@ public class TypeOfTransport {
 
     @OneToMany(mappedBy = "typeOfTransport", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Car> cars;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Set<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(Set<Car> cars) {
+        this.cars = cars;
+    }
 }
