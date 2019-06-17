@@ -39,7 +39,7 @@ public class NewsController {
 
         Page<Message> page = messageRepository.findByAuthor(user, pageable);
         model.addAttribute("page", page);
-        model.addAttribute("url", "/index");
+        model.addAttribute("url", "user_messages" + user.getId());
         model.addAttribute("message" , message);
         model.addAttribute("isCurrentUser", currentUser.equals(user));
 

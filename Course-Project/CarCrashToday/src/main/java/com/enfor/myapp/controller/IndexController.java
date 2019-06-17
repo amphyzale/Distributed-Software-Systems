@@ -4,6 +4,7 @@ import com.enfor.myapp.entity.Message;
 import com.enfor.myapp.entity.User;
 import com.enfor.myapp.repository.MessageRepository;
 import com.enfor.myapp.service.FileService;
+import com.enfor.myapp.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,10 +13,8 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -23,7 +22,6 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.util.Map;
-import java.util.Set;
 
 @Controller
 public class IndexController {
@@ -32,6 +30,9 @@ public class IndexController {
 
     @Autowired
     private FileService fileService;
+
+    @Autowired
+    private MessageService messageService;
 
     @GetMapping("/")
     public String greeting(Model model) {
@@ -42,13 +43,7 @@ public class IndexController {
     public String index(@RequestParam(required = false, defaultValue = "") String filter,
                         Model model,
                         @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable) {    //параметры запроса
-        Page<Message> page;
-
-        if (filter != null && !filter.isEmpty()) {
-            page = messageRepository.findByTag(filter, pageable);
-        } else {
-            page = messageRepository.findAll(pageable);
-        }
+        Page<Message> page = messageService.messageList(pageable, filter);
 
         model.addAttribute("page", page);
         model.addAttribute("url", "/index");
