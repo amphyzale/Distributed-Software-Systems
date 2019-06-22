@@ -10,8 +10,8 @@
             </form>
         </div>
     </div>
-    <a class="btn btn-primary mb-2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-       aria-controls="collapseExample">Предложить новость</a>
+    <a class="btn btn-primary mb-2" data-toggle="collapse" href="#collapseNews" role="button" aria-expanded="false"
+       aria-controls="collapseNews">Предложить новость</a>
     <#include "parts/messageEdit.ftl" />
 
     <#include 'parts/newsList.ftl' />

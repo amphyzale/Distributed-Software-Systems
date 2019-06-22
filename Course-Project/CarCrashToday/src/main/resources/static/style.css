@@ -1,3 +1,13 @@
 body{
     color: blue;
 }
+
+ul.dropdown-search-box {
+    max-height: 300px;
+    width: 270px;
+    overflow-y: auto;
+}
+ul.dropdown-search-box .search-box {
+    padding: 0 5px 5px 5px;
+    border-bottom: 1px solid #ddd;
+}

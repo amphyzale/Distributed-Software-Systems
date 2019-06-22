@@ -13,7 +13,7 @@ public class Car {
     private Long id;
 
     @NotBlank(message = "Пожалйста, заполните поле!")
-    @Length(max = 256,  message = "Многа букав!")
+    @Length(max = 10,  message = "Многа букав!")
     private String regNum;
 
     @ManyToOne(fetch = FetchType.EAGER)
