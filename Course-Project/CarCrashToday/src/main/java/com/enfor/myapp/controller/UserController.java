@@ -27,7 +27,7 @@ public class UserController {
 
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("{user}")
-    public String userEditForm(@PathVariable User user, Model model) {  //pathVariable - что получить из формы (в данном случае юзверь)
+    public String userEditForm(@PathVariable User user, Model model) {  //pathVariable - что получить из формы (в данном случае юзверь ПУТЬ)
         model.addAttribute("user", user);
         model.addAttribute("roles", Role.values());
 

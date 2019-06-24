@@ -1,8 +1,8 @@
 package com.enfor.myapp.controller;
 
-import com.enfor.myapp.entity.*;
+import com.enfor.myapp.entity.Message;
+import com.enfor.myapp.entity.User;
 import com.enfor.myapp.repository.*;
-import com.enfor.myapp.service.CarService;
 import com.enfor.myapp.service.FileService;
 import com.enfor.myapp.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +10,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.lang.Nullable;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,15 +21,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.Valid;
 import java.io.IOException;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.Locale;
 import java.util.Map;
 
 @Controller
@@ -42,9 +34,6 @@ public class NewsController {
 
     @Autowired
     private MessageService messageService;
-
-    @Autowired
-    private CarService carService;
 
     @Autowired
     private RegionsRepository regionsRepository;
@@ -77,7 +66,7 @@ public class NewsController {
     public String index(@RequestParam(required = false, defaultValue = "") String filter,
                         Model model,
                         @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable) {    //параметры запроса
-        Page<Message> page = messageService.messageList(pageable, filter);
+        Page<Message> page = messageService.publishedMessageList(pageable, filter, statusesRepository.findById(3L));
 
         model.addAttribute("regions", regionsRepository.findAll());
         model.addAttribute("cities", citiesRepository.findAll());
@@ -109,7 +98,9 @@ public class NewsController {
             @Validated Message message,
             BindingResult bindingResult,
             Model model,
-            @RequestParam("file") MultipartFile file) throws IOException {
+            @RequestParam("file") MultipartFile file,
+            @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable
+    ) throws IOException {
 
         message.setAuthor(user);
         message.setStatus(statusesRepository.findById(1L));
@@ -121,7 +112,7 @@ public class NewsController {
         } else {
             fileService.saveFile(message, file);
             model.addAttribute("message", null);
-            message =  messageService.buildMesaage(regNum1, brandOfCar1,
+            message =  messageService.buildMessage(regNum1, brandOfCar1,
                     modelOfCar1, typeOfBody1, typeOfTransport1, regNum2, brandOfCar2, modelOfCar2, typeOfBody2,
                     typeOfTransport2, message);
             messageRepository.save(message);
@@ -129,7 +120,7 @@ public class NewsController {
 
         model.addAttribute("message", null);
 
-        Iterable<Message> messages = messageRepository.findAll();
+        Iterable<Message> messages = messageRepository.findAllByStatus(pageable, statusesRepository.findById(3L));
         model.addAttribute("messages", messages);
 
         return "redirect:/index";
@@ -145,6 +136,7 @@ public class NewsController {
     ) {
 
         Page<Message> page = messageRepository.findByAuthor(user, pageable);
+
         model.addAttribute("regions", regionsRepository.findAll());
         model.addAttribute("cities", citiesRepository.findAll());
         model.addAttribute("streets", streetsRepository.findAll());
@@ -161,11 +153,51 @@ public class NewsController {
         return "userNews";
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
+    @GetMapping("/user_news/admin")
+    public String proposedNews(
+            @AuthenticationPrincipal User currentUser, //пользователь из сессии
+            Model model,
+            @RequestParam(required = false) Message message,
+            @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable
+    ) {
+        Page<Message> page = messageRepository.findAllByStatus(pageable, statusesRepository.findById(2L));
+        model.addAttribute("url", "user_messages" + "admin");
+
+        model.addAttribute("page" , page);
+        model.addAttribute("isCurrentUser", false);
+
+        return "proposedNews";
+    }
+
+   /* @GetMapping("/user_news/propose/{user}")
+    public String getProposeNews(@AuthenticationPrincipal User currentUser,
+                                 @PathVariable Long user,
+                                 @Validated Message message) {
+
+        return "redirect:/user_news/" + user;
+    }*/
+
+//    @RequestMapping(/*value = "/user_news/propose/{user}",*/ method = {RequestMethod.GET, RequestMethod.POST})
+    @PostMapping("/user_news/propose/{user}")
+    public String updateProposeNews(
+            @AuthenticationPrincipal User currentUser,
+            @PathVariable Long user,
+            @Validated Message message) {
+
+        if (message != null) {
+            message.setStatus(statusesRepository.findById(2L));
+            messageRepository.save(message);
+        }
+
+        return "redirect:/user_news/" + user;
+    }
+
     @PostMapping("/user_news/{user}")
     public String updateNews(
             @AuthenticationPrincipal User currentUser,
             @PathVariable Long user,
-            //@RequestParam("id") Message message,
+            @RequestParam("id") Message message,
             @RequestParam("text") String text,
             @RequestParam("tag") String tag,
             @RequestParam("regNum1") String regNum1,
@@ -178,7 +210,7 @@ public class NewsController {
             @RequestParam("modelOfCar2") @Nullable Long modelOfCar2,
             @RequestParam("typeOfBody2") @Nullable Long typeOfBody2,
             @RequestParam("typeOfTransport1") @Nullable Long typeOfTransport2,
-            @Validated Message message,
+            //@Validated Message message,
             @RequestParam("file") MultipartFile file
     ) throws IOException {
         if (message.getAuthor().equals(currentUser)) {
@@ -192,7 +224,7 @@ public class NewsController {
 
             fileService.saveFile(message, file);
 
-            message =  messageService.buildMesaage(regNum1, brandOfCar1, modelOfCar1, typeOfBody1, typeOfTransport1,
+            message =  messageService.buildMessage(regNum1, brandOfCar1, modelOfCar1, typeOfBody1, typeOfTransport1,
                     regNum2, brandOfCar2, modelOfCar2, typeOfBody2,
                     typeOfTransport2, message);
             messageRepository.save(message);

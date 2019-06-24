@@ -17,7 +17,7 @@
             </li>
             <#if user??>
             <li class="nav-item active">
-                <a class="nav-link" href="/user_news/${currentUserId}">Предложенные новости</a>
+                <a class="nav-link" href="<#if isAdmin>/user_news/admin<#else>/user_news/${currentUserId}</#if>">Предложенные новости</a>
             </li>
             </#if>
             <#if isAdmin>

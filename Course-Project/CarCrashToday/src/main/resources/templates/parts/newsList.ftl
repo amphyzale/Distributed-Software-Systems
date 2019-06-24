@@ -50,40 +50,40 @@
                 </div>
 
                 <#if message.car2??>
-                <div class="card ml-4" >
-                    <div class="card-body">
-                        <h5 class="card-title">Участник ДТП</h5>
-                        <table class="table table-borderless">
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td colspan="2">Гос. номер/Регистрационный знак:</td>
-                                <td>${message.car2.regNum}</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td colspan="2">Марка:</td>
-                                <td>${message.car2.car_brandOfCar.name}</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Модель:</td>
-                                <td>${message.car2.car_modelOfCar.name}</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td colspan="2">Тип кузова:</td>
-                                <td>${message.car2.typeOfBody.name}</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td colspan="2">Вид транспорта:</td>
-                                <td>${message.car2.typeOfTransport.name}</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="card ml-4" >
+                        <div class="card-body">
+                            <h5 class="card-title">Участник ДТП</h5>
+                            <table class="table table-borderless">
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td colspan="2">Гос. номер/Регистрационный знак:</td>
+                                    <td>${message.car2.regNum}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td colspan="2">Марка:</td>
+                                    <td>${message.car2.car_brandOfCar.name}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Модель:</td>
+                                    <td>${message.car2.car_modelOfCar.name}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td colspan="2">Тип кузова:</td>
+                                    <td>${message.car2.typeOfBody.name}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td colspan="2">Вид транспорта:</td>
+                                    <td>${message.car2.typeOfTransport.name}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
                 </#if>
 
             </div>
@@ -124,10 +124,23 @@
             <p class="card-text"><small class="text-muted">${message.tag}</i></small></p>
 
         </div>
+
         <div class="card-footer" align="right">
             Пользователь: <a href="/user_news/${message.author.id}">${message.authorName}</a>
             <#if message.author.id == currentUserId>
-                <a class="btn btn-primary" href="/user_news/${message.author.id}?message=${message.id}">Редактировать</a>
+                <#if message.status.id != 3>
+                    <a class="btn btn-primary" href="/user_news/${message.author.id}?message=${message.id}">Редактировать</a>
+                    <#if message.status.id == 2>
+                        <a class="btn btn-primary" href="/user_news/${message.author.id}">Опубликовать</a>
+                    <#else >
+                        <a class="btn btn-primary" href="/user_news/propose/${message.author.id}?message=${message.id}">Отправить</a>
+                    </#if>
+                </#if>
+            </#if>
+            <#if message.author.id == currentUserId>
+                <div>
+                    <small class="text-muted">Статус: ${message.status.name}</i></small>
+                </div>
             </#if>
         </div>
     </div>
