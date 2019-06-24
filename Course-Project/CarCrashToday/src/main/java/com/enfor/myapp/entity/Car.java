@@ -32,6 +32,22 @@ public class Car {
     @JoinColumn(name = "transport_id")
     private TypeOfTransport typeOfTransport;
 
+
+    public Car(String regNum,
+               BrandOfCar car_brandOfCar,
+               ModelOfCar car_modelOfCar,
+               TypeOfBody typeOfBody,
+               TypeOfTransport typeOfTransport) {
+        this.regNum = regNum;
+        this.car_brandOfCar = car_brandOfCar;
+        this.car_modelOfCar = car_modelOfCar;
+        this.typeOfBody = typeOfBody;
+        this.typeOfTransport = typeOfTransport;
+    }
+
+    public Car() {
+    }
+
     public Long getId() {
         return id;
     }

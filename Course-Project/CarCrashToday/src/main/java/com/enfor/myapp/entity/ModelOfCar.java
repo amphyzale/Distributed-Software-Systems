@@ -21,7 +21,7 @@ public class ModelOfCar {
     @JoinColumn(name = "brand_id")
     private BrandOfCar brandOfCar;
 
-    @OneToMany(mappedBy = "car_modelOfCar", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "car_modelOfCar", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Car> cars;
 
     public Long getId() {

@@ -1,10 +1,11 @@
 package com.enfor.myapp.entity;
 
 import org.hibernate.validator.constraints.Length;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 public class Message {
@@ -20,18 +21,17 @@ public class Message {
     @Length(max = 2048, message = "Многа букав!")
     private String text;
 
+    @Nullable
     @Length(max = 255, message = "Многа букав!")
     private String tag;
 
-    @NotBlank(message = "Пожалйста, заполните поле!")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date dateOfCrash;
+    private LocalDate dateOfCrash;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "status_id")
     private Status status;
 
-    @NotBlank(message = "Пожалйста, заполните поле!")
+//    @NotBlank(message = "Пожалйста, заполните поле!")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "car1_id")
     private Car car1;
@@ -40,7 +40,7 @@ public class Message {
     @JoinColumn(name = "car2_id")
     private Car car2;
 
-    @NotBlank(message = "Пожалйста, заполните поле!")
+//    @NotBlank(message = "Пожалйста, заполните поле!")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "street1_id")
     private Street street1;
@@ -49,7 +49,7 @@ public class Message {
     @JoinColumn(name = "street2_id")
     private Street street2;
 
-    @NotBlank(message = "Пожалйста, заполните поле!")
+//    @NotBlank(message = "Пожалйста, заполните поле!")
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "road_obj_id")
     private TypeOfRoadObj typeOfRoadObj;
@@ -121,11 +121,11 @@ public class Message {
         this.title = title;
     }
 
-    public Date getDateOfCrash() {
+    public LocalDate getDateOfCrash() {
         return dateOfCrash;
     }
 
-    public void setDateOfCrash(Date dateOfCrash) {
+    public void setDateOfCrash(LocalDate dateOfCrash) {
         this.dateOfCrash = dateOfCrash;
     }
 
