@@ -19,6 +19,8 @@ public interface MessageRepository extends CrudRepository<Message, Long> {
 
     Page<Message> findAllByStatus(Pageable pageable, Status status);
 
+    Page<Message> findAllByStatusOrAuthor(Pageable pageable, Status status, User author);
+
     Set<Message> findAllByStatus(Status status);
 
     Page<Message> findByAuthor(User user, Pageable pageable);

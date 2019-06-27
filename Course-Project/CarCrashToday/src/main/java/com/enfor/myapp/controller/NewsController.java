@@ -168,7 +168,7 @@ public class NewsController {
             @RequestParam(required = false) Message message,
             @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable
     ) {
-        Page<Message> page = messageRepository.findAllByStatus(pageable, statusesRepository.findById(2L));
+        Page<Message> page = messageRepository.findAllByStatusOrAuthor(pageable, statusesRepository.findById(2L), currentUser);
 
         model.addAttribute("regions", regionsRepository.findAll());
         model.addAttribute("cities", citiesRepository.findAll());
