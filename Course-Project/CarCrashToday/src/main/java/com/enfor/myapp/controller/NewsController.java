@@ -1,6 +1,7 @@
 package com.enfor.myapp.controller;
 
 import com.enfor.myapp.entity.Message;
+import com.enfor.myapp.entity.Role;
 import com.enfor.myapp.entity.User;
 import com.enfor.myapp.repository.*;
 import com.enfor.myapp.service.FileService;
@@ -134,8 +135,14 @@ public class NewsController {
             @RequestParam(required = false) Message message,
             @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable
     ) {
+        Page<Message> page;
+        if (user.getRoles().contains(Role.ADMIN)) {
+            page = messageRepository.findAllByStatus(pageable, statusesRepository.findById(2L));
+            model.addAttribute("url", "user_messages" + "admin");
 
-        Page<Message> page = messageRepository.findByAuthor(user, pageable);
+        } else {
+            page = messageRepository.findByAuthorAndStatus(user, pageable, statusesRepository.findById(3L));
+        }
 
         model.addAttribute("regions", regionsRepository.findAll());
         model.addAttribute("cities", citiesRepository.findAll());
@@ -154,7 +161,7 @@ public class NewsController {
     }
 
     @PreAuthorize("hasAuthority('ADMIN')")
-    @GetMapping("/user_news/admin")
+    @GetMapping("/user_news/1")
     public String proposedNews(
             @AuthenticationPrincipal User currentUser, //пользователь из сессии
             Model model,
@@ -162,6 +169,17 @@ public class NewsController {
             @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable
     ) {
         Page<Message> page = messageRepository.findAllByStatus(pageable, statusesRepository.findById(2L));
+
+        model.addAttribute("regions", regionsRepository.findAll());
+        model.addAttribute("cities", citiesRepository.findAll());
+        model.addAttribute("streets", streetsRepository.findAll());
+        model.addAttribute("roadObj", roadObjectsRepository.findAll());
+        model.addAttribute("models", modelOfCarRepository.findAll());
+        model.addAttribute("bodies", typeOfBodyRepository.findAll());
+        model.addAttribute("typeOfTransports", typeOfTransportRepository.findAll());
+        model.addAttribute("brands", brandOfCarRepository.findAll());
+        model.addAttribute("page", page);
+
         model.addAttribute("url", "user_messages" + "admin");
 
         model.addAttribute("page" , page);
@@ -170,16 +188,7 @@ public class NewsController {
         return "proposedNews";
     }
 
-   /* @GetMapping("/user_news/propose/{user}")
-    public String getProposeNews(@AuthenticationPrincipal User currentUser,
-                                 @PathVariable Long user,
-                                 @Validated Message message) {
-
-        return "redirect:/user_news/" + user;
-    }*/
-
-//    @RequestMapping(/*value = "/user_news/propose/{user}",*/ method = {RequestMethod.GET, RequestMethod.POST})
-    @PostMapping("/user_news/propose/{user}")
+    @RequestMapping(value = "/user_news/propose/{user}", method = {RequestMethod.GET, RequestMethod.POST})
     public String updateProposeNews(
             @AuthenticationPrincipal User currentUser,
             @PathVariable Long user,
@@ -193,11 +202,25 @@ public class NewsController {
         return "redirect:/user_news/" + user;
     }
 
+    @RequestMapping(value = "/user_news/public/{user}", method = {RequestMethod.GET, RequestMethod.POST})
+    public String publicProposeNews(
+            @AuthenticationPrincipal User currentUser,
+            @PathVariable Long user,
+            @Validated Message message) {
+
+        if (message != null) {
+            message.setStatus(statusesRepository.findById(3L));
+            messageRepository.save(message);
+        }
+
+        return "redirect:/user_news/" + user;
+    }
+
     @PostMapping("/user_news/{user}")
     public String updateNews(
             @AuthenticationPrincipal User currentUser,
             @PathVariable Long user,
-            @RequestParam("id") Message message,
+            //@RequestParam("id") Message message,
             @RequestParam("text") String text,
             @RequestParam("tag") String tag,
             @RequestParam("regNum1") String regNum1,
@@ -210,7 +233,7 @@ public class NewsController {
             @RequestParam("modelOfCar2") @Nullable Long modelOfCar2,
             @RequestParam("typeOfBody2") @Nullable Long typeOfBody2,
             @RequestParam("typeOfTransport1") @Nullable Long typeOfTransport2,
-            //@Validated Message message,
+            @Validated Message message,
             @RequestParam("file") MultipartFile file
     ) throws IOException {
         if (message.getAuthor().equals(currentUser)) {

@@ -11,3 +11,39 @@ ul.dropdown-search-box .search-box {
     padding: 0 5px 5px 5px;
     border-bottom: 1px solid #ddd;
 }
+
+.social a {
+    font-size: 4em;
+    padding: 10px;
+}
+
+.fa-facebook {color: #3b5998}
+.fa-instagram {color: #C13584}
+.fa-twitter {color: #00acee}
+.fa-youtube {color: #c4302b}
+.fa-vk {color: #4c75a3}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-youtube:hover,
+.fa-vk:hover {
+    color: #ccc;
+}
+
+/*.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    background-color: #f5f5f5;
+}*/
+
+/*
+footer {
+    flex: 0 0 auto;
+    background-color: #f8f9fa;
+    padding-top: 10px;
+    color: rgba(0,0,0,.9);
+}*/

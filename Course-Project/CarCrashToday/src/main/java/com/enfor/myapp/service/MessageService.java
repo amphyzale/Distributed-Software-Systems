@@ -10,6 +10,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.util.Set;
+
 @Service
 public class MessageService {
     @Autowired
@@ -19,12 +21,16 @@ public class MessageService {
     private CarService carService;
 
     public Page<Message> publishedMessageList(Pageable pageable, String filter, Status status) {
-        if (filter != null && !filter.isEmpty()) {
+        if (filter != null && !StringUtils.isEmpty(filter)) {
             return messageRepository.findByTagAndStatus(filter, pageable, status);
         } else {
             return messageRepository.findAllByStatus(pageable, status);
         }
 
+    }
+
+    public Set<Message> getAllPublichedMessage(Status status) {
+        return messageRepository.findAllByStatus(status);
     }
 
     public Message buildMessage(String regNum1, Long brandOfCar1, Long modelOfCar1, Long typeOfBody1,
